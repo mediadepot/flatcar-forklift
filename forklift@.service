@@ -1,0 +1,18 @@
+[Unit]
+Description=Compile Kernel Modules for Flatcar
+Requires=network-online.target update-engine.service
+After=network-online.target update-engine.service
+
+[Service]
+EnvironmentFile=/usr/share/coreos/release
+EnvironmentFile=/usr/share/coreos/update.conf
+EnvironmentFile=/etc/coreos/update.conf
+Environment=FORKLIFT_BIN_DIR=/opt/flatcar-forklift
+
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=-/bin/bash -c "${FORKLIFT_BIN_DIR}/forklift.sh %i"
+TimeoutStopSec=infinity
+
+[Install]
+WantedBy=multi-user.target
