@@ -8,7 +8,7 @@ if [ -z "$1" ]
 fi
 
 # Prepare Environment
-export FORKLIFT_DRIVER_NAME=${0}
+export FORKLIFT_DRIVER_NAME=${1}
 export FORKLIFT_INSTALL_DIR=${FORKLIFT_INSTALL_DIR:-/opt/drivers}
 export FORKLIFT_CACHE_DIR="${FORKLIFT_INSTALL_DIR}/archive/${FORKLIFT_DRIVER_NAME}"
 
