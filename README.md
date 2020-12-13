@@ -16,7 +16,7 @@ Forklift is based on the following CoreOS projects:
 - https://github.com/squat/modulus
 - https://github.com/BugRoger/coreos-nvidia-driver
 
-# SystemD
+# SystemD Installation
 
 ```
 sudo git clone https://github.com/mediadepot/flatcar-forklift.git /opt/flatcar-forklift
@@ -28,3 +28,9 @@ sudo systemctl start forklift@nvidia
 # read the logs
 sudo journalctl -fu  forklift@nvidia
 ```
+
+# Supported Drivers
+
+| Driver Name | Url |
+| --- | --- |
+| NVIDIA | https://github.com/mediadepot/docker-flatcar-nvidia-driver |
