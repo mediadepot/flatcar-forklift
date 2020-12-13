@@ -24,4 +24,7 @@ sudo cp /opt/flatcar-forklift/forklift@.service /etc/systemd/system/forklift@.se
 
 sudo systemctl enable forklift@nvidia
 sudo systemctl start forklift@nvidia
+
+# read the logs
+sudo journalctl -fu  forklift@nvidia
 ```
