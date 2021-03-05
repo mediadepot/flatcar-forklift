@@ -22,8 +22,8 @@ if [ -d "${FORKLIFT_CACHE_DIR}/${FLATCAR_RELEASE_VERSION}" ]
 then
     echo "Drivers for ${FORKLIFT_DRIVER_NAME}@${FLATCAR_RELEASE_VERSION} already exist locally"
 else
-    docker pull mediadepot/flatcar-${FORKLIFT_DRIVER_NAME}-driver:flatcar_${FLATCAR_RELEASE_VERSION}-${FORKLIFT_DRIVER_NAME}_latest
-    docker run --rm -v ${FORKLIFT_CACHE_DIR}/${FLATCAR_RELEASE_VERSION}:/out mediadepot/flatcar-${FORKLIFT_DRIVER_NAME}-driver:flatcar_${FLATCAR_RELEASE_VERSION}-${FORKLIFT_DRIVER_NAME}_latest
+    docker pull docker.pkg.github.com/mediadepot/docker-flatcar-${FORKLIFT_DRIVER_NAME}-driver/flatcar-${FORKLIFT_DRIVER_NAME}-driver:flatcar_${FLATCAR_RELEASE_VERSION}-${FORKLIFT_DRIVER_NAME}_latest
+    docker run --rm -v ${FORKLIFT_CACHE_DIR}/${FLATCAR_RELEASE_VERSION}:/out docker.pkg.github.com/mediadepot/docker-flatcar-${FORKLIFT_DRIVER_NAME}-driver/flatcar-${FORKLIFT_DRIVER_NAME}-driver:flatcar_${FLATCAR_RELEASE_VERSION}-${FORKLIFT_DRIVER_NAME}_latest
 fi
 
 # setup symlink from cache directory to "install" directory
