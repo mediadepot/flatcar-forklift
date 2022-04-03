@@ -16,6 +16,10 @@ Forklift is based on the following CoreOS projects:
 - https://github.com/squat/modulus
 - https://github.com/BugRoger/coreos-nvidia-driver
 
+See my blog post for more information:
+
+https://blog.thesparktree.com/customize-flatcar-kernel-part-3
+
 # SystemD Installation
 
 ```
