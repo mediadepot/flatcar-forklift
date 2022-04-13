@@ -1,7 +1,7 @@
 [Unit]
 Description=Compile Kernel Modules for Flatcar
-Requires=docker.service network-online.target update-engine.service
-After=docker.service network-online.target update-engine.service
+Requires=docker.service network-online.target update-engine.service usr-lib64-modules.mount
+After=docker.service network-online.target update-engine.service usr-lib64-modules.mount
 
 [Service]
 EnvironmentFile=/usr/share/coreos/release

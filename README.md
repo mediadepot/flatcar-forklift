@@ -24,7 +24,10 @@ https://blog.thesparktree.com/customize-flatcar-kernel-part-3
 
 ```
 sudo git clone https://github.com/mediadepot/flatcar-forklift.git /opt/flatcar-forklift
-sudo cp /opt/flatcar-forklift/forklift@.service /etc/systemd/system/forklift@.service
+sudo ./opt/flatcar-forklift/install.sh
+
+sudo systemctl enable usr-lib64-modules.mount
+sudo systemctl start usr-lib64-modules.mount
 
 sudo systemctl enable forklift@nvidia
 sudo systemctl start forklift@nvidia
