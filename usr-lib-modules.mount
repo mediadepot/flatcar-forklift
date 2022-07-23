@@ -6,8 +6,8 @@ ConditionPathExists=/opt/overlay/modules
 [Mount]
 Type=overlay
 What=overlay
-Where=/usr/lib64/modules
-Options=lowerdir=/usr/lib64/modules,upperdir=/opt/overlay/modules,workdir=/opt/overlay/modules.wd
+Where=/usr/lib/modules
+Options=lowerdir=/usr/lib/modules,upperdir=/opt/overlay/modules,workdir=/opt/overlay/modules.wd
 
 [Install]
 WantedBy=local-fs.target
